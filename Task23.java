@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-public class Task9 {
+public class Task23 {
     public static void main(String[] args) {
         Scanner myData = new Scanner(System.in);
 
@@ -25,7 +25,11 @@ public class Task9 {
         if (numberList.isEmpty()) {
             System.out.println("Ничего не найдено :(");
         } else {
-            System.out.println("Количество подходящих чисел: " + numberList.size());
+            System.out.println("Подходящие числа:");
+            for (int number : numberList) {
+                System.out.println(number);
+            }
+            System.out.println("Их количество: " + numberList.size());
         }
 
         myData.close();  
