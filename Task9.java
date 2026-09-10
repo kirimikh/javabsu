@@ -1,14 +1,14 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-public class task9 {
+public class Task9 {
     public static void main(String[] args) {
         Scanner myData = new Scanner(System.in);
 
         System.out.println("Введите последовательность натуральных чисел через пробел >");
-        String subsiquence = myData.nextLine().trim();
+        String subsequence = myData.nextLine().trim();
 
-        String[] numbers = subsiquence.split("\\s+");
+        String[] numbers = subsequence.split("\\s+");
 
         List<Integer> numberList = new ArrayList<>();
 
@@ -22,11 +22,15 @@ public class task9 {
             }
         }
 
-        System.out.println("Подходящие числа:");
-        for(int number : numberList){
-            System.out.println(number);
+        if(numberList.isEmpty()){
+            System.out.println("Ничего не найдено :(");
+        }else{
+            System.out.println("Подходящие числа:");
+            for(int number : numberList){
+                System.out.println(number);
+            }
+            System.out.println("Их количество: " + numberList.size());
         }
-        System.out.println("Их количество: " + numberList.size());
 
         myData.close();  
     }
