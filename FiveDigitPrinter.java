@@ -1,7 +1,9 @@
+/*Найти и вывести все пятизначные числа из заданной последовательности чисел,
+средняя цифра которых равна сумме крайних цифр. Подсчитать их количество. */
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-public class Task23 {
+public class FiveDigitPrinter {
     public static void main(String[] args) {
         Scanner myData = new Scanner(System.in);
 

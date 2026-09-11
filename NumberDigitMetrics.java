@@ -1,5 +1,7 @@
+/*Для каждого числа из заданной последовательности целых чисел найти сумму и
+произведение его цифр. */
 import java.util.Scanner;
-public class Task37 {
+public class NumberDigitMetrics {
     public static void main(String[] args) {
         Scanner myData = new Scanner(System.in);
 

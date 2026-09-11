@@ -1,7 +1,9 @@
+/*Найти все пятизначные натуральные числа из заданной последовательности
+чисел и подсчитать их количество, в которых средняя цифра равна сумме крайних цифр. */
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-public class Task9 {
+public class FiveDigitCounter {
     public static void main(String[] args) {
         Scanner myData = new Scanner(System.in);
 
