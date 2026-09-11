@@ -5,7 +5,7 @@ public class Task9 {
     public static void main(String[] args) {
         Scanner myData = new Scanner(System.in);
 
-        System.out.println("Введите последовательность натуральных чисел через пробел >");
+        System.out.println("Введите последовательность натуральных чисел (0 первым символом вводить нельзя) через пробел >");
         String subsequence = myData.nextLine().trim();
 
         String[] numbers = subsequence.split("\\s+");
