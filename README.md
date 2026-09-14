@@ -4,10 +4,10 @@
 
 **Михайлов Кирилл**
 
-*2 курс · 9 группа*
+_2 курс · 9 группа_
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Лабораторных](https://img.shields.io/badge/лабораторных-1-blue?style=for-the-badge)
+![Лабораторных](https://img.shields.io/badge/лабораторных-2-blue?style=for-the-badge)
 
 </div>
 
