@@ -22,7 +22,7 @@ public class NumberDigitMetrics {
                 }
                 System.out.printf("Сумма цифр числа %s: %d%nПроизведение цифр числа %s: %d%n", num, sum, num, product);
             } else {
-                System.out.println("Числа не найдены :(");
+                System.out.println("Элемент не подходит :(");
             }
         }
 
