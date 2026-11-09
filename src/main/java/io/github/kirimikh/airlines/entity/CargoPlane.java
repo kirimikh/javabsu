@@ -1,12 +1,14 @@
 package io.github.kirimikh.airlines.entity;
 
-public class CargoPlane extends Plane {
-    private int cargoVolume;
+import io.github.kirimikh.airlines.validation.PlaneValidator;
+
+public final class CargoPlane extends Plane {
+    private final int cargoVolume;
 
     public CargoPlane(String model, int flightRange, int fuelConsumption,
             int carryingCapacity, int cargoVolume) {
         super(model, flightRange, fuelConsumption, carryingCapacity);
-        this.cargoVolume = cargoVolume;
+        this.cargoVolume = PlaneValidator.requirePositive(cargoVolume);
     }
 
     public int getCargoVolume() {
@@ -36,9 +38,6 @@ public class CargoPlane extends Plane {
             return false;
         }
         if (!super.equals(obj)) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
             return false;
         }
         CargoPlane other = (CargoPlane) obj;

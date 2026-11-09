@@ -1,12 +1,14 @@
 package io.github.kirimikh.airlines.entity;
 
-public class PassengerPlane extends Plane {
-    private int passengerSeats;
+import io.github.kirimikh.airlines.validation.PlaneValidator;
+
+public final class PassengerPlane extends Plane {
+    private final int passengerSeats;
 
     public PassengerPlane(String model, int flightRange, int fuelConsumption,
             int carryingCapacity, int passengerSeats) {
         super(model, flightRange, fuelConsumption, carryingCapacity);
-        this.passengerSeats = passengerSeats;
+        this.passengerSeats = PlaneValidator.requirePositive(passengerSeats);
     }
 
     public int getPassengerSeats() {
@@ -36,9 +38,6 @@ public class PassengerPlane extends Plane {
             return false;
         }
         if (!super.equals(obj)) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
             return false;
         }
         PassengerPlane other = (PassengerPlane) obj;

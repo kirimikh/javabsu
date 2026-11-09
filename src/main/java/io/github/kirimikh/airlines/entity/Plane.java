@@ -1,17 +1,19 @@
 package io.github.kirimikh.airlines.entity;
 
+import io.github.kirimikh.airlines.validation.PlaneValidator;
+
 public abstract class Plane {
-    private String model;
-    private int flightRange;
-    private int fuelConsumption;
-    private int carryingCapacity;
+    private final String model;
+    private final int flightRange;
+    private final int fuelConsumption;
+    private final int carryingCapacity;
 
     public Plane(String model, int flightRange, int fuelConsumption,
             int carryingCapacity) {
-        this.model = model;
-        this.flightRange = flightRange;
-        this.fuelConsumption = fuelConsumption;
-        this.carryingCapacity = carryingCapacity;
+        this.model = PlaneValidator.requireModel(model);
+        this.flightRange = PlaneValidator.requirePositive(flightRange);
+        this.fuelConsumption = PlaneValidator.requirePositive(fuelConsumption);
+        this.carryingCapacity = PlaneValidator.requirePositive(carryingCapacity);
     }
 
     public String getModel() {
@@ -22,7 +24,7 @@ public abstract class Plane {
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((model == null) ? 0 : model.hashCode());
+        result = prime * result + model.hashCode();
         result = prime * result + flightRange;
         result = prime * result + fuelConsumption;
         result = prime * result + carryingCapacity;
@@ -41,11 +43,7 @@ public abstract class Plane {
             return false;
         }
         Plane other = (Plane) obj;
-        if (model == null) {
-            if (other.model != null) {
-                return false;
-            }
-        } else if (!model.equals(other.model)) {
+        if (!model.equals(other.model)) {
             return false;
         }
         if (flightRange != other.flightRange) {
